@@ -43,7 +43,7 @@ function App() {
   const checkWin = () => {
     Patterns.forEach((currPattern) => {
       const firstPlayer = board[currPattern[0]];
-      if (firstPlayer == "") return;
+      if (firstPlayer === "") return;
       let foundWinningPattern = true;
       currPattern.forEach((idx) => {
         if (board[idx] != firstPlayer) {
@@ -66,7 +66,7 @@ function App() {
     });
 
     if (filled) {
-      setResult({ winner: "No One", state: "Tie" });
+      setResult({ winner: "Tie !", state: "Tie" });
     }
   };
 
